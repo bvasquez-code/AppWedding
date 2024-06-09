@@ -1,0 +1,104 @@
+.container-body {
+  background-color: #f8f3f4;
+  color: #702b23;
+}
+
+.row-boda {
+  background-color: #FA8072;
+  color: #ffffff;
+}
+
+.thick-border {
+  border: 2px solid #FBB787;
+}
+
+.thick-top-bottom-border {
+  border-top: 2px solid #FBB787;
+  border-bottom: 2px solid #FBB787;
+}
+
+.date-number {
+  font-size: 50px;
+  color: #FBB787;
+}
+
+.txt-coral-title { 
+  font-family: 'Great Vibes', cursive;
+  color : #F76C6A
+}
+
+.txt-white-title { 
+  font-family: 'Great Vibes', cursive;
+  color : #ffffff
+}
+
+
+.txt-dusty-pink {color : #EAC3CB }
+.txt-coral {color : #F76C6A }
+.txt-peach {color : #FBB787 }
+.txt-salmon {color : #FA8072 }
+
+
+.btn-boda {
+  background-color: #F76C6A;
+  border-radius: 6px; /* Borde redondeado */
+  border: 0px solid transparent; /* Borde transparente para usar el degradado */
+  background-clip: padding-box; /* Necesario para que el fondo no se superponga al borde */
+  border-image: linear-gradient(to right, #F76C6A, #F76C6A) 1; /* Degradado de Coral a Salmon */
+}
+
+.btn-boda-white {
+  color: #702b23;
+  background-color: #ffffff;
+  border-radius: 6px; /* Borde redondeado */
+  border: 0px solid transparent; /* Borde transparente para usar el degradado */
+  background-clip: padding-box; /* Necesario para que el fondo no se superponga al borde */
+  border-image: linear-gradient(to right, #ffffff, #ffffff) 1; /* Degradado de Coral a Salmon */
+}
+
+
+.bold {
+  font-weight: bold;
+}
+
+
+.txt-10 {font-size: 10px;}
+.txt-12 {font-size: 12px;}
+.txt-14 {font-size: 14px;}
+.txt-16 {font-size: 16px;}
+.txt-18 {font-size: 18px;}
+.txt-20 {font-size: 20px;}
+.txt-22 {font-size: 22px;}
+.txt-24 {font-size: 24px;}
+.txt-26 {font-size: 26px;}
+.txt-28 {font-size: 28px;}
+.txt-30 {font-size: 30px;}
+.txt-32 {font-size: 32px;}
+.txt-34 {font-size: 34px;}
+.txt-36 {font-size: 36px;}
+.txt-38 {font-size: 38px;}
+.txt-40 {font-size: 40px;}
+.txt-42 {font-size: 42px;}
+.txt-44 {font-size: 44px;}
+.txt-46 {font-size: 46px;}
+.txt-48 {font-size: 48px;}
+.txt-50 {font-size: 50px;}
+
+
+.imagen-boda {
+  width: 100px; /* Ancho deseado */
+  height: auto; /* Altura automática para mantener la proporción */
+}
+
+.imagen-boda-row {
+  width: 100%; /* Ajustar imagen al ancho del contenedor */
+  height: auto; /* Mantener proporciones */
+}
+
+txt-right {
+  text-align: right; /* Alinear texto a la derecha */
+}
+
+txt-left {
+  text-align: left; /* Alinear texto a la derecha */
+}
