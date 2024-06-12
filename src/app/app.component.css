@@ -1,6 +1,13 @@
+@font-face {
+  font-family: 'Boda_B_C';
+  src: url('/assets/font/PONYPEN.ttf') format('truetype');
+}
+
 .container-body {
   background-color: #f8f3f4;
-  color: #702b23;
+  /* color: #702b23; */
+  font-family: 'PONYPEN';
+  color : #111111;
 }
 
 .row-boda {
@@ -101,4 +108,11 @@ txt-right {
 
 txt-left {
   text-align: left; /* Alinear texto a la derecha */
+}
+
+.cruz-icon {
+  width: 10px; /* Ajusta el ancho de la imagen de la cruz según tus necesidades */
+  height: auto; /* Esto mantendrá la proporción de la imagen */
+  vertical-align: middle; /* Esto alineará verticalmente la imagen con el texto */
+  margin-right: 5px; /* Ajusta el margen entre la imagen de la cruz y el texto según tus necesidades */
 }
