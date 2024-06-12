@@ -1,12 +1,12 @@
 @font-face {
   font-family: 'Boda_B_C';
-  src: url('/assets/font/PONYPEN.ttf') format('truetype');
+  src: url('/assets/font/Notably Absent DEMO.ttf') format('truetype');
 }
 
 .container-body {
   background-color: #f8f3f4;
   /* color: #702b23; */
-  font-family: 'PONYPEN';
+  font-family: 'Boda_B_C';
   color : #111111;
 }
 
