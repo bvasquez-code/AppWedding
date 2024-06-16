@@ -14,6 +14,11 @@ export class AppComponent implements OnInit, OnDestroy {
   private subscription: Subscription = new Subscription;
   public countdown: string = "";
 
+  public days: string = "";
+  public hours: string = "";
+  public minutes: string = "";
+  public seconds: string = "";
+
   constructor() {}
   ngOnDestroy(): void {
     if (this.subscription) {
@@ -64,6 +69,11 @@ export class AppComponent implements OnInit, OnDestroy {
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     this.countdown = `${days}días | ${hours}hs | ${minutes}min | ${seconds}seg`;
+
+    this.days = `${days}`;
+    this.hours = `${hours}`;
+    this.minutes = `${minutes}`;
+    this.seconds = `${seconds}`;
 
     if (distance < 0) {
       this.countdown = 'The event has started!';

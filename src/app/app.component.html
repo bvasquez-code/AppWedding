@@ -3,7 +3,7 @@
 </div>
 
 @if (isMobile) {
-  <div class="row">
+  <div>
     <img class="img-fluid imagen-boda-row" src="assets\img\foto2.jpg" />
   </div>
 } @else {
@@ -15,7 +15,7 @@
 <div class="container container-body row-boda text-center">
   <br>
 </div>
-<div class="container container-body">
+<div class="container container-body-img">
   <div class="container text-center">
     <br>
     <div class="row">
@@ -23,7 +23,7 @@
     </div>
     <br>
 
-    <div class="row txt-20">
+    <div class="row txt-16">
       <div class="col-12">"Mi corazón está ligado al tuyo,</div>
       <div class="col-12">de modo que ambos solo pueden ser uno,</div>
       <div class="col-12">dos corazones unidos por un solo juramento"</div>
@@ -58,33 +58,51 @@
     <br><br>
 
     <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4 txt-coral txt-20 text-center">
+        Septiembre
+      </div>
+      <div class="col-4"></div>
+    </div>
+    <div class="row">
       <div class="col-4">
-        <div class="col-12 thick-top-bottom-border txt-20 txt-peach">
+        <div class="col-12 thick-top-bottom-border txt-20 txt-coral">
           Sábado
         </div>
       </div>
-      <div class="col-4 date-number txt-20">
-        Septiembre
+      <div class="col-4 txt-coral txt-30">
+        21
       </div>
       <div class="col-4">
-        <div class="col-12 thick-top-bottom-border txt-20 txt-peach">
+        <div class="col-12 thick-top-bottom-border txt-20 txt-coral">
           04:00 PM
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-4"></div>
-      <div class="col-4 date-number">
-        21
-      </div>
-      <div class="col-4"></div>
-    </div>
+    <br>
+
     <div class="row countdown">
-      <div class="txt-20">
-        {{ countdown }}
+      <div class="col-2"></div>
+      <div class="col-8">
+        <div class="row">
+          <div class="col-3 txt-18 thick-right">
+            {{ days }}<br>Días
+          </div>
+          <div class="col-3 txt-18 thick-right">
+            {{ hours }}<br>Hrs
+          </div>
+          <div class="col-3 txt-18 thick-right">
+            {{ minutes }}<br>Min
+          </div>
+          <div class="col-3 txt-18">
+            {{ seconds }}<br>Seg
+          </div>
+        </div>
       </div>
+      <div class="col-2"></div>
     </div>
 
+    <br>
     <br>
     <div class="row">
       <div class="church">
@@ -150,7 +168,7 @@
 
     <br>
     <div class="row">
-      <div class="col-12 txt-16 bold">
+      <div class="col-12 txt-20 bold">
        Castillo de Luna
       </div>
     </div>
@@ -221,7 +239,7 @@
   <br>
 </div>
 
-<div class="container container-body">
+<div class="container container-body-img">
   <div class="container text-center">
 
     <br>
@@ -253,7 +271,7 @@
         02
       </div>
       <div class="col-5 txt-16 bold">
-        Persona(s)
+        persona(s)
       </div>
     </div>
 
