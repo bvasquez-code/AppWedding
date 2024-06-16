@@ -1,13 +1,25 @@
 @font-face {
   font-family: 'Boda_B_C';
-  src: url('/assets/font/Notably Absent DEMO.ttf') format('truetype');
+  src: url('/assets/font/comic.ttf') format('truetype');
 }
+
+
+/* Añadir un fondo semi-transparente a los contenedores */
+
 
 .container-body {
   background-color: #f8f3f4;
   /* color: #702b23; */
   font-family: 'Boda_B_C';
   color : #111111;
+  /* background-color: rgba(255, 255, 255, 0.1); Fondo blanco con 80% de opacidad */
+  /* padding: 20px; Añadir espacio alrededor del contenido */
+  /* border-radius: 10px; Bordes redondeados */
+  /* background-image: url('/assets/img/5340319.png'); */
+  background-size: cover; /* Asegura que la imagen cubra todo el ancho */
+  background-repeat: repeat-y; /* Repetir la imagen en el eje Y */
+  background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+  background-position: center top; /* Centrar la imagen en la parte superior */
 }
 
 .row-boda {
