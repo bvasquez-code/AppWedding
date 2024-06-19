@@ -56,11 +56,23 @@
   border-right: 2px solid #FBB787;
 }
 
-
-.txt-coral-title { 
+/*.txt-coral-title { 
   font-family: 'Great Vibes', cursive;
   color : #F76C6A
+}*/
+
+
+
+@font-face {
+  font-family: 'Boda_B_C2';
+  src: url('/assets/font/Achieve.otf') format('truetype');
 }
+
+.txt-coral-title {
+  font-family: 'Boda_B_C2';
+  color : #F76C6A;
+}
+
 
 .txt-white-title { 
   font-family: 'Great Vibes', cursive;
@@ -99,6 +111,7 @@
 
 .txt-10 {font-size: 10px;}
 .txt-12 {font-size: 12px;}
+.txt-13 {font-size: 13px;}
 .txt-14 {font-size: 14px;}
 .txt-16 {font-size: 16px;}
 .txt-18 {font-size: 18px;}
