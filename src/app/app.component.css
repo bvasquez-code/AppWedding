@@ -34,8 +34,13 @@
 
 
 
-.row-boda {
+/*.row-boda {
   background-color: #FA8072;
+  color: #ffffff;
+}*/
+
+.row-boda {
+  background-color: #ef7090;
   color: #ffffff;
 }
 
@@ -68,11 +73,15 @@
   src: url('/assets/font/Achieve.otf') format('truetype');
 }
 
-.txt-coral-title {
+/*.txt-coral-title {
   font-family: 'Boda_B_C2';
   color : #F76C6A;
-}
+}*/
 
+.txt-coral-title {
+  font-family: 'Boda_B_C2';
+  color : #ff9b51;
+}
 
 .txt-white-title { 
   font-family: 'Great Vibes', cursive;
@@ -87,11 +96,11 @@
 
 
 .btn-boda {
-  background-color: #F76C6A;
+  background-color: #ff6088;
   border-radius: 6px; /* Borde redondeado */
   border: 0px solid transparent; /* Borde transparente para usar el degradado */
   background-clip: padding-box; /* Necesario para que el fondo no se superponga al borde */
-  border-image: linear-gradient(to right, #F76C6A, #F76C6A) 1; /* Degradado de Coral a Salmon */
+  border-image: linear-gradient(to right, #ff6088, #ff6088) 1; /* Degradado de Coral a Salmon */
 }
 
 .btn-boda-white {
