@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
+import { ExcelService } from './service/ExcelService';
 
 @Component({
   selector: 'app-root',
@@ -18,8 +19,11 @@ export class AppComponent implements OnInit, OnDestroy {
   public hours: string = "";
   public minutes: string = "";
   public seconds: string = "";
+  jsonData: any;
 
-  constructor() {}
+
+  constructor(private excelService : ExcelService) {}
+
   ngOnDestroy(): void {
     if (this.subscription) {
       this.subscription.unsubscribe();
@@ -80,5 +84,14 @@ export class AppComponent implements OnInit, OnDestroy {
       this.subscription.unsubscribe();
     }
   }
+
+  // loadExcelFile() {
+  //   this.excelService.readExcelFileFromAssets().subscribe(data => {
+  //     this.jsonData = data;
+  //     console.log(this.jsonData);
+  //   }, error => {
+  //     console.error('Error reading Excel file', error);
+  //   });
+  // }
 
 }
