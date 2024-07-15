@@ -84,7 +84,7 @@
 }
 
 .txt-white-title { 
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Boda_B_C2';
   color : #ffffff
 }
 
@@ -117,8 +117,15 @@
   font-weight: bold;
 }
 
+.italic {
+  font-style: italic;
+}
 
-.txt-10 {font-size: 10px;}
+
+.txt-2 {font-size: 2;}
+.txt-4 {font-size: 4;}
+.txt-6 {font-size: 6;}
+.txt-8 {font-size: 8;}
 .txt-12 {font-size: 12px;}
 .txt-13 {font-size: 13px;}
 .txt-14 {font-size: 14px;}
@@ -147,10 +154,17 @@
   height: auto; /* Altura automática para mantener la proporción */
 }
 
+.imagen-boda-short {
+  width: 60px; /* Ancho deseado */
+  height: auto; /* Altura automática para mantener la proporción */
+}
+
 .imagen-boda-row {
   width: 100%; /* Ajustar imagen al ancho del contenedor */
   height: auto; /* Mantener proporciones */
 }
+
+
 
 txt-right {
   text-align: right; /* Alinear texto a la derecha */
@@ -162,6 +176,13 @@ txt-left {
 
 .cruz-icon {
   width: 10px; /* Ajusta el ancho de la imagen de la cruz según tus necesidades */
+  height: auto; /* Esto mantendrá la proporción de la imagen */
+  vertical-align: middle; /* Esto alineará verticalmente la imagen con el texto */
+  margin-right: 5px; /* Ajusta el margen entre la imagen de la cruz y el texto según tus necesidades */
+}
+
+.generic-icon {
+  width: 20px; /* Ajusta el ancho de la imagen de la cruz según tus necesidades */
   height: auto; /* Esto mantendrá la proporción de la imagen */
   vertical-align: middle; /* Esto alineará verticalmente la imagen con el texto */
   margin-right: 5px; /* Ajusta el margen entre la imagen de la cruz y el texto según tus necesidades */
