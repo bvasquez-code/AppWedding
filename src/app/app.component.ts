@@ -70,8 +70,8 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   redirectToWhatsApp() {
-    const phoneNumber = '+51968238218';
-    const message = '¡Felicidades! Confirmo mi asistencia a la boda';
+    const phoneNumber = '+51971363680';
+    const message = '¡Hola! Confirmo mi asistencia a la boda de Braulio y Claudia para el día 21 de septiembre';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   }
@@ -158,6 +158,14 @@ export class AppComponent implements OnInit, OnDestroy {
 
     console.log({ invitation : invitation });
 
+  }
+
+  onCopySuccess() {
+    alert('Texto copiado exitosamente!');
+  }
+
+  onCopyError() {
+    alert('Error al copiar el texto.');
   }
 
 }

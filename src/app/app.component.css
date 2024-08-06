@@ -103,6 +103,22 @@
   border-image: linear-gradient(to right, #ff6088, #ff6088) 1; /* Degradado de Coral a Salmon */
 }
 
+.btn-boda-2 {
+  background-color: #ef7090;
+  border-radius: 6px; /* Borde redondeado */
+  border: 2px solid transparent; /* Borde transparente para usar el degradado */
+  background-clip: padding-box; /* Necesario para que el fondo no se superponga al borde */
+  border-image: linear-gradient(to right, #f098ae, #f098ae) 1; /* Degradado de Coral a Salmon */
+}
+
+.btn-boda-3 {
+  background-color: #f098ae;
+  border-radius: 0px; /* Borde redondeado */
+  border: 2px solid transparent; /* Borde transparente para usar el degradado */
+  background-clip: padding-box; /* Necesario para que el fondo no se superponga al borde */
+  border-image: linear-gradient(to right, #f098ae, #f098ae) 1; /* Degradado de Coral a Salmon */
+}
+
 .btn-boda-white {
   color: #702b23;
   background-color: #ffffff;
@@ -183,6 +199,13 @@ txt-left {
 
 .generic-icon {
   width: 20px; /* Ajusta el ancho de la imagen de la cruz según tus necesidades */
+  height: auto; /* Esto mantendrá la proporción de la imagen */
+  vertical-align: middle; /* Esto alineará verticalmente la imagen con el texto */
+  margin-right: 5px; /* Ajusta el margen entre la imagen de la cruz y el texto según tus necesidades */
+}
+
+.generic-icon-min {
+  width: 15px; /* Ajusta el ancho de la imagen de la cruz según tus necesidades */
   height: auto; /* Esto mantendrá la proporción de la imagen */
   vertical-align: middle; /* Esto alineará verticalmente la imagen con el texto */
   margin-right: 5px; /* Ajusta el margen entre la imagen de la cruz y el texto según tus necesidades */

@@ -264,9 +264,9 @@
     <div class="row txt-16">
       <div class="col-12 bold"> {{invitado}}, </div>
       <div class="col-12">este día tan especial para nosotros</div>
-      <div class="col-12">lo será aún más si tu estás presente</div>
-      <div class="col-12">Por eso te pedimos que antes del 15 agosto</div>
-      <div class="col-12">Nos hagas saber si podrás acompañarnos.</div>
+      <div class="col-12">lo será aún más si tú estás presente</div>
+      <div class="col-12">Por eso te pedimos que nos hagas saber</div>
+      <div class="col-12">si podrás acompañarnos.</div>
     </div>
     <br>
     <div class="row">
@@ -317,7 +317,7 @@
   <br>
   <div class="row">
     <div class="col-12 txt-16 txt-white bold">
-      Depósito o transferencia
+      Depósito o transferencia a:
     </div>
   </div>
   <br>
@@ -325,12 +325,33 @@
     <div class="col-12 txt-16 txt-white bold">
       <img src="assets\img\bcp.png" alt="Cruz" class="generic-icon"> BCP
     </div>
-    <div class="col-12 txt-16 txt-white">
-      Cuenta soles | 6536356356356
+
+    <div class="col-12 txt-16 txt-white" #textArea>
+      <div class="btn-group" role="group" aria-label="Basic outlined example">
+        <button type="button" class="btn btn-primary btn-boda-2">Cuenta soles | 30540085792085 </button>
+        <button type="button" class="btn btn-primary btn-boda-3"
+          ngxClipboard [cbContent]="'30540085792085'"
+          (cbOnSuccess)="onCopySuccess()"
+          (cbOnError)="onCopyError()"
+        >
+          <img src="assets\img\copiar_pegar.png" alt="Cruz" class="generic-icon-min">
+        </button>
+      </div>
     </div>
+    <br><br>
     <div class="col-12 txt-16 txt-white">
-      CCI | 000046536356356356
+      <div class="btn-group" role="group" aria-label="Basic outlined example">
+        <button type="button" class="btn btn-primary btn-boda-2">CCI | 00230514008579208515 &nbsp;</button>
+        <button type="button" class="btn btn-primary btn-boda-3"
+          ngxClipboard [cbContent]="'00230514008579208515'"
+          (cbOnSuccess)="onCopySuccess()"
+          (cbOnError)="onCopyError()"
+        >
+          <img src="assets\img\copiar_pegar.png" alt="Cruz" class="generic-icon-min">
+        </button>
+      </div>
     </div>
+
     <div class="col-12 txt-6 txt-white italic">
       Claudia Celeste Lozano Alarcón
     </div>
@@ -341,10 +362,29 @@
       <img src="assets\img\interbank.png" alt="Cruz" class="generic-icon"> INTERBANK
     </div>
     <div class="col-12 txt-16 txt-white">
-      Cuenta soles | 6536356356356
+      <div class="btn-group" role="group" aria-label="Basic outlined example">
+        <button type="button" class="btn btn-primary btn-boda-2">Cuenta soles | 6536356356356 &nbsp;</button>
+        <button type="button" class="btn btn-primary btn-boda-3"
+          ngxClipboard [cbContent]="'6536356356356'"
+          (cbOnSuccess)="onCopySuccess()"
+          (cbOnError)="onCopyError()"
+        >
+          <img src="assets\img\copiar_pegar.png" alt="Cruz" class="generic-icon-min">
+        </button>
+      </div>
     </div>
+    <br><br>
     <div class="col-12 txt-16 txt-white">
-      CCI | 000046536356356356
+      <div class="btn-group" role="group" aria-label="Basic outlined example">
+        <button type="button" class="btn btn-primary btn-boda-2">CCI | 000046536356356356 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+        <button type="button" class="btn btn-primary btn-boda-3"
+          ngxClipboard [cbContent]="'000046536356356356'"
+          (cbOnSuccess)="onCopySuccess()"
+          (cbOnError)="onCopyError()"
+        >
+          <img src="assets\img\copiar_pegar.png" alt="Cruz" class="generic-icon-min">
+        </button>
+      </div>
     </div>
     <div class="col-12 txt-6 txt-white italic">
       Braulio Walter Vásquez Vásquez
@@ -356,7 +396,16 @@
       <img src="assets\img\yape.png" alt="Cruz" class="generic-icon"> YAPE
     </div>
     <div class="col-12 txt-16 txt-white">
-      933210620
+      <div class="btn-group" role="group" aria-label="Basic outlined example">
+        <button type="button" class="btn btn-primary btn-boda-2">933210620</button>
+        <button type="button" class="btn btn-primary btn-boda-3"
+          ngxClipboard [cbContent]="'933210620'"
+          (cbOnSuccess)="onCopySuccess()"
+          (cbOnError)="onCopyError()"
+        >
+          <img src="assets\img\copiar_pegar.png" alt="Cruz" class="generic-icon-min">
+        </button>
+      </div>
     </div>
     <div class="col-12 txt-6 txt-white italic">
       Claudia Celeste Lozano Alarcón
@@ -368,7 +417,16 @@
       <img src="assets\img\plin.png" alt="Cruz" class="generic-icon"> PLIN
     </div>
     <div class="col-12 txt-16 txt-white">
-      968238218
+      <div class="btn-group" role="group" aria-label="Basic outlined example">
+        <button type="button" class="btn btn-primary btn-boda-2">968238218</button>
+        <button type="button" class="btn btn-primary btn-boda-3"
+          ngxClipboard [cbContent]="'968238218'"
+          (cbOnSuccess)="onCopySuccess()"
+          (cbOnError)="onCopyError()"
+        >
+          <img src="assets\img\copiar_pegar.png" alt="Cruz" class="generic-icon-min">
+        </button>
+      </div>
     </div>
     <div class="col-12 txt-6 txt-white italic">
       Braulio Walter Vásquez Vásquez
