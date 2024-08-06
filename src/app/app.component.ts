@@ -49,7 +49,7 @@ export class AppComponent implements OnInit, OnDestroy {
       this.updateCountdown();
     });
 
-    // this.loadExcelFile();
+    this.loadExcelFile();
   }
 
   checkScreenSize() {
@@ -126,7 +126,9 @@ export class AppComponent implements OnInit, OnDestroy {
         invitado	: item[0],
         numInvitados	: item[1],
         codInvitacion	: item[2],
-        numCelularConfirmacion : item[3]
+        numCelularConfirmacion : item[3],
+        key : item[4],
+        aleatorio : item[5]
       };
 
       this.jsonDataDB.push(itemJson);
