@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, Renderer2 } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
 import { ExcelService } from './service/ExcelService';
 import { ActivatedRoute } from '@angular/router';
@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit, OnDestroy {
+export class AppComponent implements OnInit, OnDestroy,AfterViewInit  {
   
   title = 'app_invitacion_boda';
   isMobile: boolean = false;
@@ -30,8 +30,36 @@ export class AppComponent implements OnInit, OnDestroy {
 
   constructor(
     private excelService : ExcelService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private el: ElementRef, 
+    private renderer: Renderer2
   ) {
+
+  }
+  ngAfterViewInit(): void {
+    
+    this.addVisibleEfect("#img-church");
+    this.addVisibleEfect("#img-cheers");
+    this.addVisibleEfect("#img-asistencia");
+    this.addVisibleEfect("#img-vestido");
+    this.addVisibleEfect("#img-camisa");
+  }
+
+  addVisibleEfect(htmlselect : string){
+
+    const imagenBoda = this.el.nativeElement.querySelector(htmlselect);
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          this.renderer.addClass(imagenBoda, 'visible');
+        } else {
+          this.renderer.removeClass(imagenBoda, 'visible');
+        }
+      });
+    });
+
+    observer.observe(imagenBoda);
 
   }
 
