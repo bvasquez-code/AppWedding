@@ -34,8 +34,13 @@
 
 
 
-.row-boda {
+/*.row-boda {
   background-color: #FA8072;
+  color: #ffffff;
+}*/
+
+.row-boda {
+  background-color: #ef7090;
   color: #ffffff;
 }
 
@@ -56,14 +61,30 @@
   border-right: 2px solid #FBB787;
 }
 
-
-.txt-coral-title { 
+/*.txt-coral-title { 
   font-family: 'Great Vibes', cursive;
   color : #F76C6A
+}*/
+
+
+
+@font-face {
+  font-family: 'Boda_B_C2';
+  src: url('/assets/font/Achieve.otf') format('truetype');
+}
+
+/*.txt-coral-title {
+  font-family: 'Boda_B_C2';
+  color : #F76C6A;
+}*/
+
+.txt-coral-title {
+  font-family: 'Boda_B_C2';
+  color : #ff9b51;
 }
 
 .txt-white-title { 
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Boda_B_C2';
   color : #ffffff
 }
 
@@ -75,11 +96,27 @@
 
 
 .btn-boda {
-  background-color: #F76C6A;
+  background-color: #ff6088;
   border-radius: 6px; /* Borde redondeado */
   border: 0px solid transparent; /* Borde transparente para usar el degradado */
   background-clip: padding-box; /* Necesario para que el fondo no se superponga al borde */
-  border-image: linear-gradient(to right, #F76C6A, #F76C6A) 1; /* Degradado de Coral a Salmon */
+  border-image: linear-gradient(to right, #ff6088, #ff6088) 1; /* Degradado de Coral a Salmon */
+}
+
+.btn-boda-2 {
+  background-color: #ef7090;
+  border-radius: 6px; /* Borde redondeado */
+  border: 2px solid transparent; /* Borde transparente para usar el degradado */
+  background-clip: padding-box; /* Necesario para que el fondo no se superponga al borde */
+  border-image: linear-gradient(to right, #f098ae, #f098ae) 1; /* Degradado de Coral a Salmon */
+}
+
+.btn-boda-3 {
+  background-color: #f098ae;
+  border-radius: 0px; /* Borde redondeado */
+  border: 2px solid transparent; /* Borde transparente para usar el degradado */
+  background-clip: padding-box; /* Necesario para que el fondo no se superponga al borde */
+  border-image: linear-gradient(to right, #f098ae, #f098ae) 1; /* Degradado de Coral a Salmon */
 }
 
 .btn-boda-white {
@@ -96,9 +133,17 @@
   font-weight: bold;
 }
 
+.italic {
+  font-style: italic;
+}
 
-.txt-10 {font-size: 10px;}
+
+.txt-2 {font-size: 2;}
+.txt-4 {font-size: 4;}
+.txt-6 {font-size: 6;}
+.txt-8 {font-size: 8;}
 .txt-12 {font-size: 12px;}
+.txt-13 {font-size: 13px;}
 .txt-14 {font-size: 14px;}
 .txt-16 {font-size: 16px;}
 .txt-18 {font-size: 18px;}
@@ -119,16 +164,76 @@
 .txt-48 {font-size: 48px;}
 .txt-50 {font-size: 50px;}
 
+.contenedor {
+  overflow: hidden;
+}
+
+@keyframes scaleAnimation {
+  0%, 100% {
+    transform: scale(1); /* Tamaño normal */
+  }
+  50% {
+    transform: scale(1.3); /* Tamaño agrandado */
+  }
+}
+
+@keyframes textScaleOne {
+  0%, 100% {
+    font-size: 90%;
+  }
+  50% {
+    font-size: 110%;
+  }
+}
+
+@keyframes textScaleTwo {
+  0%, 100% {
+    font-size: 90%;
+  }
+  50% {
+    font-size: 150%;
+  }
+}
+
+
+.txt-scale-one {
+  animation: textScaleOne 3s infinite ease-in-out;
+}
+
+.txt-scale-two {
+  animation: textScaleTwo 3s infinite ease-in-out;
+}
 
 .imagen-boda {
   width: 100px; /* Ancho deseado */
   height: auto; /* Altura automática para mantener la proporción */
+  opacity: 0; /* Inicialmente oculta */
+  transition: opacity 2s ease, transform 2s ease;
+}
+
+
+.imagen-boda.visible {
+  opacity: 1; /* Visible cuando la clase .visible se añade */
+}
+
+.imagen-boda-short.visible {
+  opacity: 1; /* Visible cuando la clase .visible se añade */
+}
+
+
+.imagen-boda-short {
+  width: 60px; /* Ancho deseado */
+  height: auto; /* Altura automática para mantener la proporción */
+  opacity: 0; /* Inicialmente oculta */
+  transition: opacity 2s ease, transform 2s ease;
 }
 
 .imagen-boda-row {
   width: 100%; /* Ajustar imagen al ancho del contenedor */
   height: auto; /* Mantener proporciones */
 }
+
+
 
 txt-right {
   text-align: right; /* Alinear texto a la derecha */
@@ -140,6 +245,20 @@ txt-left {
 
 .cruz-icon {
   width: 10px; /* Ajusta el ancho de la imagen de la cruz según tus necesidades */
+  height: auto; /* Esto mantendrá la proporción de la imagen */
+  vertical-align: middle; /* Esto alineará verticalmente la imagen con el texto */
+  margin-right: 5px; /* Ajusta el margen entre la imagen de la cruz y el texto según tus necesidades */
+}
+
+.generic-icon {
+  width: 20px; /* Ajusta el ancho de la imagen de la cruz según tus necesidades */
+  height: auto; /* Esto mantendrá la proporción de la imagen */
+  vertical-align: middle; /* Esto alineará verticalmente la imagen con el texto */
+  margin-right: 5px; /* Ajusta el margen entre la imagen de la cruz y el texto según tus necesidades */
+}
+
+.generic-icon-min {
+  width: 15px; /* Ajusta el ancho de la imagen de la cruz según tus necesidades */
   height: auto; /* Esto mantendrá la proporción de la imagen */
   vertical-align: middle; /* Esto alineará verticalmente la imagen con el texto */
   margin-right: 5px; /* Ajusta el margen entre la imagen de la cruz y el texto según tus necesidades */

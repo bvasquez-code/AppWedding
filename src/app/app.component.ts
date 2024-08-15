@@ -1,12 +1,14 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, Renderer2 } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
+import { ExcelService } from './service/ExcelService';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit, OnDestroy {
+export class AppComponent implements OnInit, OnDestroy,AfterViewInit  {
   
   title = 'app_invitacion_boda';
   isMobile: boolean = false;
@@ -18,8 +20,49 @@ export class AppComponent implements OnInit, OnDestroy {
   public hours: string = "";
   public minutes: string = "";
   public seconds: string = "";
+  public jsonData: any;
+  private id: string | null = '';
+  private jsonDataDB: any[] = [];
+  public invitationJson : any;
+  public invitado : string = "";
+  public numInvitados : string = "";
 
-  constructor() {}
+
+  constructor(
+    private excelService : ExcelService,
+    private route: ActivatedRoute,
+    private el: ElementRef, 
+    private renderer: Renderer2
+  ) {
+
+  }
+  ngAfterViewInit(): void {
+    
+    this.addVisibleEfect("#img-church");
+    this.addVisibleEfect("#img-cheers");
+    this.addVisibleEfect("#img-asistencia");
+    this.addVisibleEfect("#img-vestido");
+    this.addVisibleEfect("#img-camisa");
+  }
+
+  addVisibleEfect(htmlselect : string){
+
+    const imagenBoda = this.el.nativeElement.querySelector(htmlselect);
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          this.renderer.addClass(imagenBoda, 'visible');
+        } else {
+          this.renderer.removeClass(imagenBoda, 'visible');
+        }
+      });
+    });
+
+    observer.observe(imagenBoda);
+
+  }
+
   ngOnDestroy(): void {
     if (this.subscription) {
       this.subscription.unsubscribe();
@@ -33,6 +76,8 @@ export class AppComponent implements OnInit, OnDestroy {
     this.subscription = interval(1000).subscribe(() => {
       this.updateCountdown();
     });
+
+    this.loadExcelFile();
   }
 
   checkScreenSize() {
@@ -53,8 +98,8 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   redirectToWhatsApp() {
-    const phoneNumber = '+51968238218';
-    const message = '¡Feclicidades! Confirmo mi asistencia a la boda';
+    const phoneNumber = '+51971363680';
+    const message = '¡Hola! Confirmo mi asistencia a la boda de Braulio y Claudia para el día 21 de septiembre';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   }
@@ -79,6 +124,76 @@ export class AppComponent implements OnInit, OnDestroy {
       this.countdown = 'The event has started!';
       this.subscription.unsubscribe();
     }
+  }
+
+  loadExcelFile() {
+    this.excelService.readExcelFileFromAssets().subscribe(data => {
+
+      this.route.queryParamMap.subscribe(params => {
+        this.id = params.get('id');
+      });
+
+      console.log({ id : this.id});
+      this.jsonData = data;
+      this.parceJson(this.jsonData);
+
+      this.customizeInvitation(this.jsonDataDB,this.id);
+      
+    }, error => {
+      console.error('Error reading Excel file', error);
+    });
+  }
+
+  parceJson(jsonData : any){
+
+    jsonData.shift();
+
+    for(let item of jsonData){
+
+      let itemJson = {
+        invitado	: item[0],
+        numInvitados	: item[1],
+        codInvitacion	: item[2],
+        numCelularConfirmacion : item[3],
+        key : item[4],
+        aleatorio : item[5]
+      };
+
+      this.jsonDataDB.push(itemJson);
+    }
+
+    console.log({jsonDataDB : this.jsonDataDB});
+  }
+
+  customizeInvitation(jsonDataDB: any[],id : string | null){
+
+    let invitation : any[] = jsonDataDB.filter( e => e.codInvitacion === id);
+
+    // this.invitationJson = invitation;
+
+    if(invitation.length === 1){
+      this.invitado = invitation[0].invitado;
+      this.numInvitados = invitation[0].numInvitados;
+    }
+    if(invitation.length === 2){
+      this.invitado = `${invitation[0].invitado} y ${invitation[1].invitado}`;
+      this.numInvitados = invitation.reduce((acc, item) => acc + item.numInvitados, 0);
+    }
+    if(invitation.length > 2){
+      this.invitado = invitation.reduce((acc, item) => acc + item.invitado, "");
+      this.numInvitados = invitation.reduce((acc, item) => acc + item.numInvitados, 0);
+    }
+
+    console.log({ invitation : invitation });
+
+  }
+
+  onCopySuccess() {
+    alert('Texto copiado exitosamente!');
+  }
+
+  onCopyError() {
+    alert('Error al copiar el texto.');
   }
 
 }
