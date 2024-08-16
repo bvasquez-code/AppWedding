@@ -43,7 +43,7 @@
 
 @font-face {
   font-family: 'Boda_B_C2';
-  src: url('/assets/font/Achieve.otf') format('truetype');
+  src: url('https://bvasquez-code.github.io/AppWedding/assets/font/Achieve.otf') format('truetype');
 }
 
 .txt-coral-title {
