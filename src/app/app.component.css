@@ -1,43 +1,23 @@
 @font-face {
   font-family: 'Boda_B_C';
-  src: url('/assets/font/LTStreetwayNeue-Regular.otf') format('truetype');
+  src: url('https://bvasquez-code.github.io/AppWedding/assets/font/LTStreetwayNeue-Regular.otf') format('truetype');
 }
-
-/* Añadir un fondo semi-transparente a los contenedores */
 
 .container-body {
   background-color: #f8f3f4;
-  /* color: #702b23; */
   font-family: 'Boda_B_C';
   color : #111111;
-  /* background-color: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 10px;
-  background-image: url('/assets/img/5340319.png');
-  background-size: cover;
-  background-repeat: repeat-y;
-  background-attachment: fixed;
-  background-position: center top; */
 }
 
 .container-body-img {
   background-color: rgba(233, 199, 199, 0.1);
-  background-image: url('/assets/img/fondo-container-4.jpg');
+  background-image: url('https://bvasquez-code.github.io/AppWedding/assets/img/fondototal.jpg');
   font-family: 'Boda_B_C';
   color : #111111;
-  /* background-size: cover; */
   background-size: 100% auto;
   background-repeat: repeat-y;
-  /* background-attachment: fixed; */
   background-position: center top;
 }
-
-
-
-/*.row-boda {
-  background-color: #FA8072;
-  color: #ffffff;
-}*/
 
 .row-boda {
   background-color: #ef7090;
@@ -61,22 +41,10 @@
   border-right: 2px solid #FBB787;
 }
 
-/*.txt-coral-title { 
-  font-family: 'Great Vibes', cursive;
-  color : #F76C6A
-}*/
-
-
-
 @font-face {
   font-family: 'Boda_B_C2';
   src: url('/assets/font/Achieve.otf') format('truetype');
 }
-
-/*.txt-coral-title {
-  font-family: 'Boda_B_C2';
-  color : #F76C6A;
-}*/
 
 .txt-coral-title {
   font-family: 'Boda_B_C2';
