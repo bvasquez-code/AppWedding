@@ -78,6 +78,7 @@ export class AppComponent implements OnInit, OnDestroy,AfterViewInit  {
     });
 
     this.loadExcelFile();
+    this.playMusic();
   }
 
   checkScreenSize() {
@@ -194,6 +195,15 @@ export class AppComponent implements OnInit, OnDestroy,AfterViewInit  {
 
   onCopyError() {
     alert('Error al copiar el texto.');
+  }
+
+
+  playMusic(): void {
+    const audio = this.renderer.createElement('audio');
+    this.renderer.setAttribute(audio, 'src', './assets/music/audio.mp3');
+    this.renderer.setAttribute(audio, 'autoplay', 'true');
+    this.renderer.setAttribute(audio, 'loop', 'true');
+    this.renderer.appendChild(document.body, audio);
   }
 
 }
