@@ -99,7 +99,7 @@ export class AppComponent implements OnInit, OnDestroy,AfterViewInit  {
   }
 
   redirectToWhatsApp() {
-    const phoneNumber = '+51971363680';
+    const phoneNumber = '+51968238218';
     const message = '¡Hola! soy [nombre]. Confirmo mi asistencia a la boda de Braulio y Claudia para el día 21 de septiembre';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
